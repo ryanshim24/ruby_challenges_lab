@@ -171,8 +171,8 @@ def start
     start
   elsif answer == "no"
     puts "Here is a summary of your student array:"
-    $array.each do |student|
-      puts "This student at index #{$array.index(student)} is #{student}"
+    $array.each_with_index do |student, index|
+      puts "This student at index #{index} is #{student}"
     end
   end
 end
