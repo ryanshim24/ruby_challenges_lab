@@ -156,9 +156,26 @@
 # end
 # start
 
-    
+#BONUS CHALLENGE
 
+$array = []
 
-
+def start
+  puts "Would you like to add another Student (yes/no)"
+  answer = gets.chomp
+  if answer == "yes"
+    puts "What is the studnet's name"
+    student_new = gets.chomp
+    $array.push(student_new)
+    puts "The array of instructors now look like: #{$array}"
+    start
+  elsif answer == "no"
+    puts "Here is a summary of your student array:"
+    $array.each do |student|
+      puts "This student at index #{$array.index(student)} is #{student}"
+    end
+  end
+end
+start
 
   
